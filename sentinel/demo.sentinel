@@ -1,11 +1,13 @@
 import "tfplan/v2" as tfplan
 
+# filter out all related resources
 aws_cloudwatch_log_groups = filter tfplan.resource_changes as _, rc {
     rc.type is "aws_cloudwatch_log_group" and
     rc.change.after.tags_all.Environment is "staging" and
     (rc.change.actions contains "create" or rc.change.actions is ["update"])
 }
 
+# check if retention_in_days is not 0
 retention_in_days_not_zero = rule {
     all aws_cloudwatch_log_groups as _, lg {
         lg.change.after.retention_in_days is not 0
