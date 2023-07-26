@@ -2,8 +2,8 @@
 
 ## Run
 
-conftest test pass.json
-conftest test fail.json
+conftest test testdata/pass.json
+conftest test testdata/fail.json
 
 ## Generate Terraform JSON planfile
 1. terraform init
