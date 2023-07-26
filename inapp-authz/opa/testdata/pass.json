@@ -1,0 +1,12 @@
+{
+    "principal": {
+        "type": "User",
+        "id": "stacey"
+    },
+    "action": "viewPhoto",
+    "resource": {
+        "type": "Photo",
+        "id": "notVacationPhoto.jpg",
+        "account": "stacey"
+    }
+}
