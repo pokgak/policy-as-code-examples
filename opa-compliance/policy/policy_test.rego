@@ -1,13 +1,26 @@
 package main
 
-test_deny_staging_update {
+test_pass {
 	cfg := {"resource_changes": [{
-		"address": "aws_cloudwatch_log_group.test",
+		"address": "aws_cloudwatch_log_group.example",
 		"type": "aws_cloudwatch_log_group",
-		"name": "test",
 		"change": {
 			"actions": ["update"],
-			"before": {},
+			"after": {
+				"tags_all": {"Environment": "staging"},
+				"retention_in_days": 42,
+			},
+		},
+	}]}
+	count(deny) == 0 with input as cfg
+}
+
+test_fail {
+	cfg := {"resource_changes": [{
+		"address": "aws_cloudwatch_log_group.example",
+		"type": "aws_cloudwatch_log_group",
+		"change": {
+			"actions": ["update"],
 			"after": {
 				"tags_all": {"Environment": "staging"},
 				"retention_in_days": 0,
