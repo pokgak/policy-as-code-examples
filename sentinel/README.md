@@ -1,0 +1,3 @@
+# HOWTO
+
+run `sentinel test`
