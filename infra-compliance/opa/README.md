@@ -1,13 +1,15 @@
 # HOW TO RUN
 
-## Run
-
+```
 conftest test testdata/pass.json
 conftest test testdata/fail.json
+```
 
 ## Generate Terraform JSON planfile
 
-1. terraform init
-1. terraform plan -out=plan.out
-1. terraform show -json plan.out
+```
+terraform init
+terraform plan -out=plan.out
+terraform show -json plan.out
+```
 
