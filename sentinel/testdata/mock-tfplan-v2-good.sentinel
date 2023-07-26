@@ -1,0 +1,37 @@
+resource_changes = {
+	"aws_cloudwatch_log_group.example": {
+		"address": "aws_cloudwatch_log_group.example",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"kms_key_id":        null,
+				"name":              "/aiman/sentinel/demo",
+				"retention_in_days": 42,
+				"skip_destroy":      false,
+				"tags": {
+					"Environment": "staging",
+				},
+				"tags_all": {
+					"Environment": "staging",
+				},
+			},
+			"after_unknown": {
+				"arn":         true,
+				"id":          true,
+				"name_prefix": true,
+				"tags":        {},
+				"tags_all":    {},
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "example",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"type":           "aws_cloudwatch_log_group",
+	},
+}
