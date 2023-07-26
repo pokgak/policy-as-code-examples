@@ -1,0 +1,19 @@
+{
+    "resource_changes": [
+        {
+            "address": "aws_cloudwatch_log_group.example",
+            "type": "aws_cloudwatch_log_group",
+            "change": {
+                "actions": [
+                    "update"
+                ],
+                "after": {
+                    "retention_in_days": 42,
+                    "tags_all": {
+                        "Environment": "staging"
+                    }
+                }
+            }
+        }
+    ]
+}
