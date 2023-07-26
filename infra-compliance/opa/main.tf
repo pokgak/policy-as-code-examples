@@ -1,6 +1,5 @@
 provider "aws" {
   region = "us-east-1"
-  profile = "roar-sandbox"
 }
 
 resource "aws_cloudwatch_log_group" "example" {
