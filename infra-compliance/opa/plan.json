@@ -1,0 +1,205 @@
+{
+    "format_version": "1.2",
+    "terraform_version": "1.5.3",
+    "planned_values": {
+        "root_module": {
+            "resources": [
+                {
+                    "address": "aws_cloudwatch_log_group.example",
+                    "mode": "managed",
+                    "type": "aws_cloudwatch_log_group",
+                    "name": "example",
+                    "provider_name": "registry.terraform.io/hashicorp/aws",
+                    "schema_version": 0,
+                    "values": {
+                        "arn": "arn:aws:logs:us-east-1:044194286686:log-group:/aiman/opa/demo",
+                        "id": "/aiman/opa/demo",
+                        "kms_key_id": "",
+                        "name": "/aiman/opa/demo",
+                        "name_prefix": "",
+                        "retention_in_days": 0,
+                        "skip_destroy": false,
+                        "tags": {
+                            "Environment": "staging"
+                        },
+                        "tags_all": {
+                            "Environment": "staging"
+                        }
+                    },
+                    "sensitive_values": {
+                        "tags": {},
+                        "tags_all": {}
+                    }
+                }
+            ]
+        }
+    },
+    "resource_drift": [
+        {
+            "address": "aws_cloudwatch_log_group.example",
+            "mode": "managed",
+            "type": "aws_cloudwatch_log_group",
+            "name": "example",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
+            "change": {
+                "actions": [
+                    "update"
+                ],
+                "before": {
+                    "arn": "arn:aws:logs:us-east-1:044194286686:log-group:/aiman/opa/demo",
+                    "id": "/aiman/opa/demo",
+                    "kms_key_id": "",
+                    "name": "/aiman/opa/demo",
+                    "name_prefix": "",
+                    "retention_in_days": 1,
+                    "skip_destroy": false,
+                    "tags": null,
+                    "tags_all": {}
+                },
+                "after": {
+                    "arn": "arn:aws:logs:us-east-1:044194286686:log-group:/aiman/opa/demo",
+                    "id": "/aiman/opa/demo",
+                    "kms_key_id": "",
+                    "name": "/aiman/opa/demo",
+                    "name_prefix": "",
+                    "retention_in_days": 1,
+                    "skip_destroy": false,
+                    "tags": {},
+                    "tags_all": {}
+                },
+                "after_unknown": {},
+                "before_sensitive": {
+                    "tags_all": {}
+                },
+                "after_sensitive": {
+                    "tags": {},
+                    "tags_all": {}
+                }
+            }
+        }
+    ],
+    "resource_changes": [
+        {
+            "address": "aws_cloudwatch_log_group.example",
+            "mode": "managed",
+            "type": "aws_cloudwatch_log_group",
+            "name": "example",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
+            "change": {
+                "actions": [
+                    "update"
+                ],
+                "before": {
+                    "arn": "arn:aws:logs:us-east-1:044194286686:log-group:/aiman/opa/demo",
+                    "id": "/aiman/opa/demo",
+                    "kms_key_id": "",
+                    "name": "/aiman/opa/demo",
+                    "name_prefix": "",
+                    "retention_in_days": 1,
+                    "skip_destroy": false,
+                    "tags": {},
+                    "tags_all": {}
+                },
+                "after": {
+                    "arn": "arn:aws:logs:us-east-1:044194286686:log-group:/aiman/opa/demo",
+                    "id": "/aiman/opa/demo",
+                    "kms_key_id": "",
+                    "name": "/aiman/opa/demo",
+                    "name_prefix": "",
+                    "retention_in_days": 0,
+                    "skip_destroy": false,
+                    "tags": {
+                        "Environment": "staging"
+                    },
+                    "tags_all": {
+                        "Environment": "staging"
+                    }
+                },
+                "after_unknown": {},
+                "before_sensitive": {
+                    "tags": {},
+                    "tags_all": {}
+                },
+                "after_sensitive": {
+                    "tags": {},
+                    "tags_all": {}
+                }
+            }
+        }
+    ],
+    "prior_state": {
+        "format_version": "1.0",
+        "terraform_version": "1.5.3",
+        "values": {
+            "root_module": {
+                "resources": [
+                    {
+                        "address": "aws_cloudwatch_log_group.example",
+                        "mode": "managed",
+                        "type": "aws_cloudwatch_log_group",
+                        "name": "example",
+                        "provider_name": "registry.terraform.io/hashicorp/aws",
+                        "schema_version": 0,
+                        "values": {
+                            "arn": "arn:aws:logs:us-east-1:044194286686:log-group:/aiman/opa/demo",
+                            "id": "/aiman/opa/demo",
+                            "kms_key_id": "",
+                            "name": "/aiman/opa/demo",
+                            "name_prefix": "",
+                            "retention_in_days": 1,
+                            "skip_destroy": false,
+                            "tags": {},
+                            "tags_all": {}
+                        },
+                        "sensitive_values": {
+                            "tags": {},
+                            "tags_all": {}
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "configuration": {
+        "provider_config": {
+            "aws": {
+                "name": "aws",
+                "full_name": "registry.terraform.io/hashicorp/aws",
+                "expressions": {
+                    "profile": {
+                        "constant_value": "roar-sandbox"
+                    },
+                    "region": {
+                        "constant_value": "us-east-1"
+                    }
+                }
+            }
+        },
+        "root_module": {
+            "resources": [
+                {
+                    "address": "aws_cloudwatch_log_group.example",
+                    "mode": "managed",
+                    "type": "aws_cloudwatch_log_group",
+                    "name": "example",
+                    "provider_config_key": "aws",
+                    "expressions": {
+                        "name": {
+                            "constant_value": "/aiman/opa/demo"
+                        },
+                        "retention_in_days": {
+                            "constant_value": 0
+                        },
+                        "tags": {
+                            "constant_value": {
+                                "Environment": "staging"
+                            }
+                        }
+                    },
+                    "schema_version": 0
+                }
+            ]
+        }
+    },
+    "timestamp": "2023-07-25T16:26:52Z"
+}

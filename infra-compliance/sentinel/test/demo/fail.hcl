@@ -5,9 +5,9 @@ mock "tfplan/v2" {
 }
 
 # uncomment me to expect test to fail
-# test {
-#   rules = {
-#     retention_in_days_not_zero = false
-#     main                       = false
-#   }
-# }
+test {
+  rules = {
+    retention_in_days_not_zero = false
+    main                       = false
+  }
+}

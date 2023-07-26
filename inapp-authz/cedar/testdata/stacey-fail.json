@@ -1,0 +1,63 @@
+[
+    {
+        "uid": {
+            "type": "PhotoApp::User",
+            "id": "stacey"
+        },
+        "attrs": {
+            "age": 25,
+            "name": "stacey",
+            "userId": "897345789237492878"
+        },
+        "parents": [
+            {
+                "type": "PhotoApp::UserGroup",
+                "id": "stacey_friends"
+            },
+            {
+                "type": "PhotoApp::UserGroup",
+                "id": "AVTeam"
+            }
+        ]
+    },
+    {
+        "uid": {
+            "type": "PhotoApp::Photo",
+            "id": "vacationPhoto.jpg"
+        },
+        "attrs": {
+            "private": false,
+            "account": {
+                "__entity": {
+                    "type": "PhotoApp::Account",
+                    "id": "stacey"
+                }
+            }
+        },
+        "parents": []
+    },
+    {
+        "uid": {
+            "type": "PhotoApp::Account",
+            "id": "stacey"
+        },
+        "attrs": {},
+        "parents": []
+    },
+    {
+        "uid": {
+            "type": "PhotoApp::UserGroup",
+            "id": "stacey_friends"
+        },
+        "attrs": {},
+        "parents": []
+    },
+    {
+        "uid": {
+            "type": "PhotoApp::UserGroup",
+            "id": "AVTeam"
+        },
+        "attrs": {},
+        "parents": []
+    }
+]

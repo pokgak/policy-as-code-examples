@@ -1,7 +1,7 @@
 {
     "principal": {
         "type": "User",
-        "id": "alice"
+        "id": "admin"
     },
     "action": "viewPhoto",
     "resource": {

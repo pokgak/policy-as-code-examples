@@ -3,7 +3,9 @@ package main
 import future.keywords.if
 import future.keywords.in
 
+# filters out all the related resource
 aws_cloudwatch_log_group := groups if {
+	# input is a special keyword
 	rc := input.resource_changes[_]
 
 	# filter for aws_cloudwatch_log_group resources
@@ -13,7 +15,8 @@ aws_cloudwatch_log_group := groups if {
 	rc.change.after.tags_all.Environment == "staging"
 
 	# filter for resources with create or update actions only
-	rc.change.actions[_] == ["create", "update"][_]
+	actions_to_check := ["create", "update"]
+	rc.change.actions[_] == actions_to_check[_]
 
 	groups := input.resource_changes
 }
