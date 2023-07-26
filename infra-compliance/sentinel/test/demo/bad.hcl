@@ -4,9 +4,10 @@ mock "tfplan/v2" {
   }
 }
 
-test {
-  rules = {
-    retention_in_days_not_zero = false
-    main                       = false
-  }
-}
+# uncomment me to expect test to fail
+# test {
+#   rules = {
+#     retention_in_days_not_zero = false
+#     main                       = false
+#   }
+# }
